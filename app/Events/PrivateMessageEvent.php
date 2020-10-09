@@ -20,10 +20,10 @@ class PrivateMessageEvent implements ShouldBroadcast
     // 用户
     public $user_id;
 
-    public function __construct($id, string $message)
+    public function __construct(string $message, $id)
     {
-        $this->user_id = $id;
         $this->message = $message;
+        $this->user_id = $id;
     }
     // 创建私有频道
     public function broadcastOn()

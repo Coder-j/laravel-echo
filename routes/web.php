@@ -33,5 +33,5 @@ Route::get('/push/{message}', function ($message) {
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/privatePush/{message}/{id}', function ($message, $id) {
-    broadcast(new PrivateMessageEvent($id, $message));
+    broadcast(new PrivateMessageEvent($message, $id));
 });

@@ -20,7 +20,7 @@ Broadcast::channel('App.User.{id}', function ($user, $id) {
 Broadcast::channel('privatePush.{id}', function ($user, $id) {
     Log::info(print_r($user));
     Log::info($id);
-    return (int) $user->id === (int) $id;
+    return true;
 });
 
 Broadcast::channel('news', function ($user, $id) {
